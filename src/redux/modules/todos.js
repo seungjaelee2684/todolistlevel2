@@ -41,32 +41,32 @@ const initialState = [
 ];
 
 const todos = (state = initialState, action) => {
-    switch (action.type) {
+	switch (action.type) {
 		case INPUT:
 			return [
-                        ...state,
-						{
-							id: shortid.generate(),
-							title: action.payload.title,
-							body: action.payload.body,
-							isDone: false,
-						}
-					];
+				...state,
+				{
+					id: shortid.generate(),
+					title: action.payload.title,
+					body: action.payload.body,
+					isDone: false,
+				}
+			];
 		case remove_BTN:
 			return state.filter((todoItem) => todoItem.id !== action.payload);
 		case Change_BTN:
 			return state.map(todoItem => {
-                if (todoItem.id === action.payload) {
-                    return {
-                        ...todoItem,
-                        isDone: !todoItem.isDone,
-                    };
-                }
-                return todoItem;
-            });
-        default:
-            return state;
-    }
+				if (todoItem.id === action.payload) {
+					return {
+						...todoItem,
+						isDone: !todoItem.isDone,
+					};
+				}
+				return todoItem;
+			});
+		default:
+			return state;
+	}
 };
 
 export default todos;
