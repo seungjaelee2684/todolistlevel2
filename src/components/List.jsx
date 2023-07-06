@@ -17,7 +17,7 @@ function List() {
     return (
         <div>
             <div>
-                <h2>Working.. 🔥</h2>
+                <div><h2>Working.. 🔥</h2></div>
                 <ListBox>
                     {todos.map((item) =>
                         (item.isDone === false)
@@ -101,12 +101,13 @@ const ListBox = styled.div`
 `;
 
 const Box = styled.div`
-    width: 250px;
+    width: 230px;
+    height: 180px;
     display: inline-block;
     padding: 0px 20px 20px 20px;
     margin: 20px;
     border: 2px solid #ffa4bb;
-    border-radius: 10px;  
+    border-radius: 10px;
 `;
 
 const TitleBox = styled.div`

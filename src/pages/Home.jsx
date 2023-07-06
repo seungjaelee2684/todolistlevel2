@@ -22,7 +22,7 @@ const LayOut = styled.div`
 `;
 
 const StBox = styled.div`
-  width: 900px;
+  width: 1000px;
   height: 1000px;
   position: absolute;
   left: 50%;
