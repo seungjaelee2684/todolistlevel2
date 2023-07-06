@@ -6,10 +6,10 @@ import Home from '../pages/Home'
 function Router() {
   return (
     <BrowserRouter>
-        <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/:id' element={<Detail />} />
-        </Routes>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/:id' element={<Detail />} />
+      </Routes>
     </BrowserRouter>
   )
 }
